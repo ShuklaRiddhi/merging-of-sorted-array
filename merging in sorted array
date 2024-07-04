@@ -1,0 +1,60 @@
+If you have two sorted arrays, how can you merge them and keep the resulting array sorted?
+
+
+public class MergeSortedArrays {
+
+    public static void merge(int[] A, int[] B, int[] mergedArray) {
+        int i = 0, j = 0, k = 0;
+
+        
+        while (i < A.length && j < B.length) {
+            if (A[i] <= B[j]) {
+                mergedArray[k++] = A[i++];
+            } else {
+                mergedArray[k++] = B[j++];
+            }
+        }
+
+
+        while (i < A.length) {
+            mergedArray[k++] = A[i++];
+        }
+
+        
+        while (j < B.length) {
+            mergedArray[k++] = B[j++];
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] A = {1, 3, 5, 7};
+        int[] B = {2, 4, 6, 8};
+        int[] mergedArray = new int[A.length + B.length];
+
+        merge(A, B, mergedArray,
+
+
+        System.out.print("Merged Array: ");
+        for (int num : mergedArray) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+
+        System.out.print("Merged Array: ");
+        for (int num : mergedArray) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+
+        System.out.print("Merged Array: ");
+        for (int num : mergedArray) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+
